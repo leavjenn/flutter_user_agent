@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'flutter_user_agent'
-  s.version          = '1.2.2'
+  s.version          = '1.2.4'
   s.summary          = 'Retrieve user-agent properties.'
   s.description      = <<-DESC
 Retrieve user-agent properties
@@ -13,5 +13,5 @@ Retrieve user-agent properties
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.1'
 end
