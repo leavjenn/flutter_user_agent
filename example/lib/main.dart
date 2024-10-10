@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     try {
       userAgent = await FlutterUserAgent.getPropertyAsync('userAgent');
       await FlutterUserAgent.init();
-      webViewUserAgent = FlutterUserAgent.webViewUserAgent;
+      webViewUserAgent = FlutterUserAgent.webViewUserAgent ?? '<unknown>';
       print('''
 applicationVersion => ${FlutterUserAgent.getProperty('applicationVersion')}
 systemName         => ${FlutterUserAgent.getProperty('systemName')}
