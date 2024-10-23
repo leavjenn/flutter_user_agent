@@ -20,7 +20,7 @@ void main() {
       find.byWidgetPredicate(
         (Widget widget) {
           if (widget is Text) {
-            return widget.data.endsWith(': <unknown>');
+            return widget.data?.endsWith(': <unknown>') ?? false;
           }
           return false;
         },

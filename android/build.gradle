@@ -2,27 +2,31 @@ group 'io.jojodev.flutter.flutteruseragent'
 version '1.2.4'
 
 buildscript {
+    ext.kotlin_version = '1.8.0'
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.4'
+        classpath 'com.android.tools.build:gradle:8.7.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 34
+    namespace "io.jojodev.flutter.flutteruseragent"
 
     defaultConfig {
         minSdkVersion 16
